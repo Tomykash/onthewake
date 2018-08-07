@@ -1,0 +1,39 @@
+
+
+  <span class="toggle-button">
+       <div class="menu-bar menu-bar-top"></div>
+       <div class="menu-bar menu-bar-middle"></div>
+       <div class="menu-bar menu-bar-bottom"></div>
+  </span>
+
+ <script>
+
+var opened = false;
+
+  $(document).ready(function() {
+  var $toggleButton = $('.toggle-button');
+   $menuWrap = $('.menu-wrap');
+  $toggleButton.on('click', function() {
+   $(this).toggleClass('button-open');
+   $menuWrap.toggleClass('menu-show');
+
+
+$main = $('#main');
+$main.toggleClass('mainToggle');
+
+$footer = $('#footer');
+$footer.toggleClass('mainToggle');
+
+  opened ? opened = false : opened = true;
+
+  });
+  });
+
+  $(document).ready(function() {
+  var $sidebarArrow = $('.sidebar-menu-wrap');
+  $sidebarArrow.click(function() {
+   $(this).next().slideToggle(300);
+  });
+  });
+
+</script>

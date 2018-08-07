@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Onthewake</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  <!-- 2. Подключим jQuery UI -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+
+ <%= render "layouts/header" %>
+
+ <div class="menu-wrap">
+ <div class="menu-sidebar">
+    <ul class="menu">
+      <li><%= link_to "Главная", root_path %></li>
+          <li><%= link_to "Скалодром", skalodrom_path  %></li>
+          <li><%= link_to "Трикинг", triking_path  %></li>
+          <li><%= link_to "Батуты",  batuty_path %></li>
+          <li><%= link_to "Прайс",   price_path %></li>
+          <li><%= link_to "О нас",  about_path %></li>
+     </ul>
+  </div>
+ </div>
+
+<main id="main"  style="display: flex; flex-direction:column;transition:0.3s ease-out;">
+<%= yield %>
+</main>
+
+<script>
+document.getElementById('main').onclick = function(){
+if (opened) {
+   $toggleButton = $('.toggle-button');
+   $menuWrap = $('.menu-wrap');
+
+   $toggleButton.toggleClass('button-open');
+   $menuWrap.toggleClass('menu-show');
+   opened = false;
+ }
+}
+
+</script>
+
+
+
+<%= render "layouts/footer" %>
+
+
+
+<script>
+        $(window).scroll(function(){
+        if($(window).scrollTop()>670)
+          $("#slidebox").fadeIn('slow')
+        if($(window).scrollTop()>1340)
+      $("#slideboxshow").fadeIn('slow')
+        if($(window).scrollTop()>2100)
+          $("#slideboxhide").fadeIn('slow')
+
+        }
+      )
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+<script>
+    $( document ).on('turbolinks:load', function() {
+        $('.parallax').parallax();
+    });
+
+</script>
+
+</html>

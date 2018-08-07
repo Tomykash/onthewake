@@ -1,0 +1,74 @@
+<%= yield %>
+<div id="header-gradient" class="parallax-container" style="height: 100vh;background:black;">
+</div>
+
+
+<div  id="parallax" class="parallax-container" style="height: 100vh;">
+  <div class="parallax"><img onload="getHeaderVibrant(this)" style="filter: blur(0.3px)" src="<%= asset_path ('anya.jpg') %>"></div>
+    <div id="slidebox" class="slidebox">
+      <div  class="content2">
+        <div class="text">
+
+         </div>
+          <div class="text1">
+           <h1>БАТУТНО АКРОБАТИЧЕСКАЯ ЗОНА</h1>
+            <P align=left>
+             Всё большую популярность набирают прыжки на батутах и батутная акробатика. Экстрим центр оборудован согласно последним технологиям,
+             а логично оформленное тренировочное пространство помогает раскрепостить тело и полностью погрузиться в тренировочный процесс.
+            </P>
+            <div id="buttom1" class="buttom">
+           <%= link_to "Подробнее" , batuty_path ,:id =>"link" %>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div  class="parallax-container" style="height: 100vh">
+  <div class="parallax"><img onload="getHeaderVibrant(this)"  style="filter: blur(0.5px)" src="<%= asset_path ('321123.jpg') %>"></div>
+  <div id="slideboxshow" class="slideboxshow">
+   <div id="content" class="content">
+     <div class="text2">
+
+      </div>
+       <div class="text3">
+        <h1>Скалолазание</h1>
+        <p align="left">
+         СПОРТИВНОЕ СКАЛОЛАЗАНИЕ отлично подходит для детей и взрослых. Это очень популярный вид спорта в мире. Мы очень хотим,
+         чтобы это направление активного отдыха, а с 2020 года олимпийский вид спорта к тому же, набирало обороты в нашей горной стране.
+         СКАЛОЛАЗАНИЕ очень увлекательное занятие, а профессиональное оборудование Экстрим центра сделает его максимально безопасным.
+         Площадь скалодрома достаточная,
+          чтобы лазать несколько часов подряд. Разве это не поражает?
+         </p>
+         <div id="buttom" class="buttom">
+        <%= link_to "Подробнее" , skalodrom_path ,:id =>"link1" %>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+<div  class="parallax-container" style="height: 100vh">
+  <div class="parallax"><img onload="getHeaderVibrant(this)" style="filter: blur(0.5px)" src="<%= asset_path ('bg.jpg') %>"></div>
+  <div id="slideboxhide" class="slideboxhide" >
+    <div class="content1">
+      <div class="text4">
+
+         </div>
+         <div class="text5">
+          <h1>ТРИКИНГ УЛИЧНОЕ ИСКУССТВО</h1>
+           <p align="left">
+           Трикинг - это спортивное движение, представляющее собой сочетание движений из боевых искусств, гимнастики,
+            капоэйры, брейкданса и других спортивных дисциплин для создания зрелищной смеси из вращений в разных плоскостях.
+            Слово «трикинг» — общепринятое сокращение от полного названия дисциплины — martial arts tricking, в переводе на русский обозначающего «трюки боевых искусств».
+           </p>
+          <div id="buttom2" class="buttom">
+         <%= link_to "Подробнее" , triking_path,:id =>"link2" %>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
